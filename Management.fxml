@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.smartwastesegregator.Management"
+      alignment="CENTER" spacing="20" style="-fx-background-color: #f0f0f0;">
+    <Label text="Welcome to the Management Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <Button text="Manage Plastic Data" fx:id="managePlasticButton" style="-fx-pref-width: 150;" onAction="#handleManagePlasticData"/>
+    <Button text="Manage Metal Data" fx:id="manageMetalButton" style="-fx-pref-width: 150;" onAction="#handleManageMetalData"/>
+    <Button text="Logout" fx:id="logoutButton" style="-fx-pref-width: 100;" onAction="#handleLogout"/>
+</VBox>

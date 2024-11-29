@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginPane" prefHeight="370.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartwastesegregator.LoginController">
+   <children>
+      <ImageView fitHeight="533.0" fitWidth="808.0" layoutX="-1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/backgroundlogin.jpeg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+
+      <!-- Username Label -->
+      <Label layoutX="95.0" layoutY="203.0" text="Username" textFill="#e1d6d6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <!-- Password Label -->
+      <Label layoutX="99.0" layoutY="257.0" text="Password" textFill="#e1d6d6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <!-- TextField for username -->
+      <TextField fx:id="usernameField" alignment="CENTER" layoutX="303.0" layoutY="208.0" promptText="Username" />
+
+      <!-- PasswordField for password -->
+      <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="302.0" layoutY="262.0" promptText="Password" />
+
+      <!-- Login Button -->
+      <Button fx:id="loginButton" alignment="CENTER" layoutX="313.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #FF7F50;" text="Login" />
+
+      <!-- New User Registration Button -->
+      <Button fx:id="newUserButton" layoutX="309.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleNewUserButtonAction" text="New User Registration" />
+
+      <!-- Invalid Login Label -->
+      <Label fx:id="invalidLoginLabel" alignment="CENTER" layoutX="249.0" layoutY="167.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="254.0" text="Welcome user" textFill="#e1dfdf">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Label>
+
+      <!-- Forgot Password Link -->
+      <Hyperlink fx:id="forgotPasswordLink" layoutX="671.0" layoutY="480.0" onAction="#handleForgotPasswordLinkAction" prefHeight="35.0" prefWidth="126.0" text="Forgot Password?" />
+      <Text fill="#d9d0d0" layoutX="254.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" textAlignment="JUSTIFY" wrappingWidth="254.4000000000001">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="681.0" layoutY="446.0" onAction="#handleManagement" prefHeight="26.0" prefWidth="79.0" text="Management" />
+   </children>
+</AnchorPane>
